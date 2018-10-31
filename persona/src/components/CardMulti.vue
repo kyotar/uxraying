@@ -5,11 +5,13 @@
 </template>
 
 <script>
+// import Init from './CommonScript.vue';
+
 export default {
   name: 'card',
   props: {
     placeholder: String,
-    rows: Number
+    rows: String
   }
 }
 </script>
@@ -18,7 +20,6 @@ export default {
 .card {
   textarea {
     resize: none;
-    // height: 400px;
   }
 }
 </style>
