@@ -24,9 +24,6 @@
 </template>
 
 <script>
-import CardSingle from './components/CardSingle.vue'
-import CardMulti from './components/CardMulti.vue'
-
 export default {
   name: 'app',
   data() {
@@ -55,7 +52,7 @@ export default {
       let vm = this;
 
         // ファイルを読み時
-        reader.onload = (function(theFile){
+        reader.onload = (function(){
           return function(e){
             vm.imgUrl = e.target.result;
             vm.setStorage('imgUrl', vm.imgUrl);
@@ -66,7 +63,7 @@ export default {
         reader.readAsDataURL(files[0]);
     },
 
-    setStorage: function(key, value){
+    setStorage: function(key){
       localStorage.setItem(key, this[key]);
     }
   }
