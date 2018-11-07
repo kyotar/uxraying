@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28501387-6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,13 +11,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="UXRAYING">
-  <meta name="keywords" content="UXRAYING">
-  <link rel="icon" href="./assets/img/favicon.png">
-  <link rel="shortcut icon" href="./assets/img/favicon.png">
-  <link rel="apple-touch-icon" href="./assets/img/favicon.png">
+  <meta name="description" content="UXRAYING - UX Design Tools">
+  <meta name="keywords" content="UXRAYING, UX, Design">
+  <meta property="og:url" content="https://uxraying.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UXRAYING - UX Design Tools">
+  <meta property="og:description" content="UXRAYING - UX Design Tools">
+  <meta property="og:site_name" content="UXRAYING">
+  <meta property="og:image" content="https://uxraying.com/assets/img/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@kyota">
+  <link rel="icon" href="/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <title>UXRAYING</title>
+  <title>UXRAYING - UX Design Tools</title>
   <style>
   html, body, main {height: 100%;}
   body {
@@ -29,8 +36,19 @@
     justify-content: center;
     align-items: center;
   }
-  h1 {margin: 0; text-align: center;}
+  section {margin: 0; text-align: center;}
+  h1 { margin: 80px; }
   h1 img {max-width: 640px; min-width: 320px; width: 100%;}
+  .btn {
+    color: #1bb0cc;
+    border: 1px solid #1bb0cc;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .btn:hover {
+    opacity: .5;
+  }
   footer {
     text-align: center;
     font-size: 12px;
@@ -38,18 +56,21 @@
     bottom: 20px;
     width: 100%;
   }
-  a {
+  footer a {
     color: #1bb0cc;
     text-decoration: none;
   }
-  a:hover {
+  footer a:hover {
     opacity: .5;
   }
   </style>
 </head>
 <body>
   <main>
-    <h1><img src="./assets/img/logo_white.svg" alt="UXRAYING"></h1>
+    <section>
+      <h1><img src="./assets/img/logo_white.svg" alt="UXRAYING"></h1>
+      <a href="./persona/" class="btn">Persona</a>
+    </section>
   </main>
   <footer><small><a href="https://twitter.com/kyota" target="_blank">©kyota</a></small></footer>
 </body>
