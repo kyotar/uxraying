@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header><img src="./assets/images/logo_black.svg" alt=""></header>
+    <header><a href="/"><img src="./assets/images/logo_black.svg" alt=""></a></header>
     <main>
       <section class="user-profile">
         <label class="user-avatar" for="files">
@@ -131,11 +131,12 @@ header {
 
 main {
   display: flex;
-  width: 960px;
+  max-width: 960px;
+  padding: 16px;
   margin: 0 auto;
 
   .user-profile {
-    width: 240px;
+    max-width: 240px;
     margin-right: 40px;
 
     .user-avatar {
@@ -160,7 +161,7 @@ main {
   }
 
   .user-data {
-    width: 680px;
+    max-width: 680px;
   }
 
   input[type="text"], textarea {
@@ -187,6 +188,7 @@ main {
 footer {
   text-align: center;
   font-size: $fontS;
+  height: 32px;
 
   a {
     color: $blue;
@@ -195,6 +197,21 @@ footer {
 
   a:hover {
     opacity: .5;
+  }
+}
+
+@media screen and (max-width:480px) {
+  main {
+    max-width: 480px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .user-profile {
+      max-width: 480px;
+      margin: 0;
+    }
   }
 }
 </style>
