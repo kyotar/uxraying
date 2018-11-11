@@ -28,17 +28,20 @@
   <style>
   html, body, main {height: 100%;}
   body {
-    background: url('./assets/img/bg.jpg') no-repeat center center;
+    font-family: -apple-system, BlinkMacSystemFont, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, sans-serif;
+    background: #000 url('./assets/img/bg.jpg') no-repeat center center;
     background-size: cover;
+    position: relative;
   }
   main {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   section {margin: 0; text-align: center;}
-  h1 { margin: 80px; }
-  h1 img {max-width: 640px; min-width: 320px; width: 100%;}
+  h1 { margin: 80px auto; }
+  h1 img {max-width: 320px; min-width: 320px; width: 100%;}
   .btn {
     color: #1bb0cc;
     border: 1px solid #1bb0cc;
@@ -52,7 +55,7 @@
   footer {
     text-align: center;
     font-size: 12px;
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     width: 100%;
   }
