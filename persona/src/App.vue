@@ -14,9 +14,9 @@
       </section>
 
       <section class="user-data">
-        <fieldset><legend>ユーザーストーリー</legend><textarea placeholder="どのような経歴・背景から、どのような日常生活やシチュエーションか" rows="8" v-model="story" @keyup="setStorage('story')" @change="setStorage('story')" /></fieldset>
-        <fieldset><legend>課題</legend><textarea placeholder="課題：その日常生活で抱えている悩みごと" rows="8" v-model="issue" @keyup="setStorage('issue')" @change="setStorage('issue')" /></fieldset>
-        <fieldset><legend>ゴール</legend><textarea placeholder="どうなりたいか、どんな目的があるか" rows="8" v-model="goal" @keyup="setStorage('goal')" @change="setStorage('goal')" /></fieldset>
+        <fieldset><legend>ユーザーストーリー</legend><textarea placeholder="どのような日常生活を送っているのか" rows="8" v-model="story" @keyup="setStorage('story')" @change="setStorage('story')" /></fieldset>
+        <fieldset><legend>課題</legend><textarea placeholder="その日常生活で抱えている悩みごと" rows="8" v-model="issue" @keyup="setStorage('issue')" @change="setStorage('issue')" /></fieldset>
+        <fieldset><legend>ゴール</legend><textarea placeholder="どう在りたいか、どんな目的があるか" rows="8" v-model="goal" @keyup="setStorage('goal')" @change="setStorage('goal')" /></fieldset>
       </section>
     </main>
     <footer><small><a href="https://twitter.com/kyota" target="_blank">©kyota</a></small></footer>
