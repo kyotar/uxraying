@@ -9,7 +9,7 @@
         </label>
 
         <input type="text" placeholder="名前" maxlength="12" v-model="name" @keyup="setStorage('name')" @change="setStorage('name')" />
-        <input type="text" placeholder="年齢" maxlength="2" v-model="age" @keyup="setStorage('age')" @change="setStorage('age')" />
+        <label class="age"><input type="number" placeholder="年齢" maxlength="2" min="0" max="99" v-model="age" @keyup="setStorage('age')" @change="setStorage('age')" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" /></label>
         <textarea placeholder="職業、住まい、趣味など" rows="8" v-model="profile" @keyup="setStorage('profile')" @change="setStorage('profile')" />
       </section>
 
@@ -111,6 +111,16 @@ $fontS: 12px;
   color: $gray-normal;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance:textfield;
+}
+
 h1, h2 {
   margin: 0;
 }
@@ -194,7 +204,7 @@ main {
 
   }
 
-  input[type="text"], textarea {
+  input[type="text"], input[type="number"], textarea {
     background-color: #fff;
     border-radius: 8px;
     padding: 16px;
@@ -206,12 +216,26 @@ main {
     transition: all 300ms 0s ease-in;
   }
 
-  input[type="text"]:focus, textarea:focus {
+  input[type="text"]:focus, input[type="number"], textarea:focus {
     box-shadow: 0px 0px 10px $blue;
   }
 
   textarea {
     resize: none;
+  }
+
+
+}
+.age {
+  position: relative;
+
+  &::after {
+    content: '\6B73'; // 歳
+    color: $gray-normal;
+    font-size: $fontM;
+    top: 0;
+    right: 12px;
+    position: absolute;
   }
 }
 
