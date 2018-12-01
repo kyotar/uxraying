@@ -213,11 +213,13 @@ main {
     width: 100%;
     margin-bottom: 16px;
     font-size: $fontM;
+    border: 1px solid transparent;
     transition: all 300ms 0s ease-in;
   }
 
-  input[type="text"]:focus, input[type="number"], textarea:focus {
-    box-shadow: 0px 0px 10px $blue;
+  input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    box-shadow: 0 0 10px $blue;
+    border: 1px solid $blue;
   }
 
   textarea {
