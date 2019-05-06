@@ -19,7 +19,10 @@
         <fieldset><legend>ゴール</legend><textarea placeholder="どう在りたいか、どんな目的があるか" rows="8" v-model="goal" @keyup="setStorage('goal')" @change="setStorage('goal')" /></fieldset>
       </section>
     </main>
-    <footer><small><a href="https://twitter.com/kyota" target="_blank">©kyota</a></small></footer>
+    <footer>
+      <div><a href="https://note.mu/kyota/n/n32fb7bed892d?creator_urlname=kyota" target="_blank">About</a></div>
+      <div><a href="https://twitter.com/kyota" target="_blank">©kyota</a></div>
+    </footer>
   </div>
 </template>
 
@@ -244,15 +247,25 @@ main {
 footer {
   text-align: center;
   font-size: $fontS;
-  height: 32px;
+  padding: 32px 0;
 
-  a {
-    color: $blue;
-    text-decoration: none;
-  }
+  div {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    padding: 0 8px;
 
-  a:hover {
-    opacity: .5;
+    &:last-child {
+      border: none;
+    }
+
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: .5;
+    }
   }
 }
 
